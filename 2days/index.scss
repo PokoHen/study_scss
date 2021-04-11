@@ -1,0 +1,21 @@
+// 한줄 주석 - scss에서만 
+/* 여러줄 주석 - css에서도 */
+
+// 변수
+// $로 시작한다
+// 반드시 영문부터 시작해야한다
+
+$gray:#c9c9c9;
+$white:#fff;
+$blue:blue;
+$red:red;
+$fs30: 30px;
+
+.btn1 { 
+    display: block; width: 200px; height: 50px; line-height: 50px; font-size: $fs30; color: $gray; background-color: $white; border: 1px solid $gray; text-align: center;
+    &:hover{ background-color: $gray; color: $white;}
+}
+// 자기자신을 나타내는 것은 &이다.
+
+.btn2{ display: block; padding: 10px; font-size: $fs30; border:1px solid $red; background: $blue; color: $gray;
+}

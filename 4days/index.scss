@@ -1,0 +1,44 @@
+/*
+    @mixin = @keyframe ani{}
+    @include = animation-name:ani
+
+    어찌보면 클래스를 만들어서 선언하는 것과 같은 거 같다.
+    $는 변수, mixin은 함수, include는 함수호출
+*/
+/*
+@mixin test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+@mixin clear {
+    &::after{ content: ""; display: block; clear: both; }
+}
+// clear는 float때문에 뭉쳐지는걸 풀어주는 역할
+div{ 
+    border: 3px solid blue; 
+    @include clear();
+}
+p{ float: left; @include test(); }
+*/
+
+/* 매개변수 하나 넣기 */
+/*
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+div{ @include border(blue); }
+p { @include border(pink); }
+span { @include border(#222); }
+*/
+
+/* 매개변수 여러개 넣기 */
+@mixin box($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+// px이나 %는 꼭 넣어주어야 한다. 그냥 숫자만 적으면 안되유
+div{ @include box(300px, 400px); border: 1px solid blue; }

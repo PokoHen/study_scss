@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.a { color: red; }
+.a ul { border: 1px solid red; }
+.a ul > li { background: pink; }
+.a ul > li a { text-decoration: none; }
+.a ul > li a:hover { color: red; }
+.a ul > li a.bbb { font-size: 11px; }
+.a ul > li .bbb { text-indent: 10px; }
+.a ul > li:last-child { border: 1px solid yellow; }
+
+/*  자식 태그를 내부에 적어서 바로 적용 가능하다  가상 선택자는 &로 표현하여 자기 자신의 가상 선택자를 변경 가능하다.    
+*/
+
+/*# sourceMappingURL=index.css.map */

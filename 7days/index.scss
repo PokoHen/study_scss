@@ -1,0 +1,30 @@
+//extend는 %변수 로 선언한다.
+
+//mixin과 차이
+
+//extend는 and 느낌으로 css를 만든다.
+
+@mixin name($bold, $color) {
+    font-weight: $bold;
+    background: $color;
+}
+
+%name { font-size: 14px; color: blue;}
+.fs20{ font-size: 20px; }
+
+.a{@extend %name; @include name(bold, grey);}
+.b{@extend .fs20; }
+.c{@extend %name; }
+
+.visual { background: pink; height: 300px;
+    div {@extend %m0auto; background: rgba(0,0,0,0.5); height: 300px;}
+}
+.main { background: purple; height: 500px;
+    div {@extend %m0auto; background: rgba(0,0,0,0.5); height: 500px;}}
+.footer { background: violet; height: 150px;
+    div {@extend %m0auto; background: rgba(0,0,0,0.5); height: 150px;}
+}
+
+%m0auto{ width: 1200px; margin: 0 auto; }
+
+// 가운데로 content를 가득 채우지만 가로 값을 변경을 한번에 하고 싶을 때 extend를 사용한다.

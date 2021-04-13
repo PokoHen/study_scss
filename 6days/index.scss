@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+// .list li { background: no-repeat 0 0 / 20px auto; text-indent: 30px;}
+
+// // to 부분은 미만이라는 뜻으로 생각, 원하는 것보다 1개 더 만들어야 한다.
+// @for $i from 1 to 5 {
+//     .list li.ico#{$i} { background-image: url(img/icon#{$i}.png); }
+//     .list li:nth-child(#{$i})::before { content: '제목#{$i}';}
+// }
+
+$icon: ('facebook', 'insta', 'twitter','youtube');
+
+@each $var in $icon {
+    .ico_#{$var}{
+        background: url(img/#{$var}.png) no-repeat;
+    }
+}
+
+$heading: (
+    h1: 30px,
+    h2: 20px,
+    h3: 15px,
+    h4: 10px,
+);
+
+//ele: 엘리먼트, fs: 폰트사이즈 
+@each $ele, $fs in $heading {
+    #{$ele} {
+        font-size: $fs;
+    }
+}

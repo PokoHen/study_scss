@@ -1,0 +1,12 @@
+//문자보간 #{}
+
+// $bx: box;
+
+// div.#{$bx} { border: 1px solid red; }
+
+@mixin bx($position, $wd, $color) {
+    border-#{$position}: $wd solid $color;
+}
+
+div { @include bx(right, 2px, red)}
+p { @include bx(bottom, 5px, grey)}

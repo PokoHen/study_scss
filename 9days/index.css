@@ -6,4 +6,6 @@
 
 .c { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; width: 150px; height: 66px; -webkit-box-orient: vertical; text-overflow: ellipsis; }
 
+.d { position: absolute; left: 50%; top: 50%; z-index: -2; width: 500px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); height: 200px; border: 1px solid red; }
+
 /*# sourceMappingURL=index.css.map */

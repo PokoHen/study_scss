@@ -1,0 +1,9 @@
+.a { border: 1px solid blue; background: red; }
+.a::after { content: ''; display: block; clear: both; }
+.a > div { float: left; }
+
+.b { width: 150px; overflow: hidden; display: block; text-overflow: ellipsis; white-space: nowrap; }
+
+.c { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; width: 150px; height: 66px; -webkit-box-orient: vertical; text-overflow: ellipsis; }
+
+/*# sourceMappingURL=index.css.map */
